@@ -11,11 +11,12 @@ pool:
 
 variables:
   buildConfiguration: 'Release'
-  BITLY_API_KEY: $(apiKey)
-  BITLY_API_LOGIN: $(apiLogin)
 
 steps:
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'Build $(buildConfiguration)'
 - script: dotnet test --configuration $(buildConfiguration)
   displayName: 'Run tests ($(buildConfiguration))'
+  env:
+    BITLY_API_KEY: $(apiKey)
+    BITLY_API_LOGIN: $(apiLogin)
