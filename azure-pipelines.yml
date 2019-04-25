@@ -13,8 +13,10 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
-- powershell: ./setEnvironmentVariables.ps1 
-  arguments: '$env:apiLogin $env:apiKey'
+- task: PowerShell@2
+  inputs:
+    filePath: './setEnvironmentVariables.ps1'
+    arguments: '$env:apiLogin $env:apiKey'
   displayName: 'PowerShell Script'
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'Build $(buildConfiguration)'
