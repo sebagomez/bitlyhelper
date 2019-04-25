@@ -7,15 +7,16 @@ trigger:
 - master
 
 pool:
-  vmImage: 'Ubuntu-16.04'
+  vmImage: 'vs2017-win2016'
 
 variables:
   buildConfiguration: 'Release'
-  BITLY_API_KEY: '$(apiKey)'
-  BITLY_API_LOGIN: '$(apiLogin)'
 
 steps:
+- powershell: ./setEnvironmentVariables.ps1 
+  arguments: '$env:apiLogin $env:apiKey'
+  displayName: 'PowerShell Script'
 - script: dotnet build --configuration $(buildConfiguration)
-  displayName: 'Build $(buildConfiguration) requested by $(Build.SourceVersionAuthor)'
+  displayName: 'Build $(buildConfiguration)'
 - script: dotnet test --configuration $(buildConfiguration)
   displayName: 'Run tests ($(buildConfiguration))'
