@@ -7,11 +7,19 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
+using Xunit.Abstractions;
 
 namespace BitLyTests
 {
 	public class BasiTests
 	{
+		private readonly ITestOutputHelper output;
+
+		public BasiTests(ITestOutputHelper output)
+		{
+			this.output = output;
+		}
+
 		public static string APILogin { get; set; }
 		public static string APIKey { get; set; }
 
@@ -53,6 +61,9 @@ namespace BitLyTests
 		[Fact]
 		public async Task Test1()
 		{
+			output.WriteLine($"APILogin is: '{APILogin}'");
+			output.WriteLine($"APIKey is: '{APIKey}'");
+
 			BitLyShortener shortener = new BitLyShortener(APILogin, APIKey);
 			string shortened = await shortener.GetShortenString("This is a string with Google url http://google.com");
 
