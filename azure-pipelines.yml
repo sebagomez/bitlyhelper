@@ -13,10 +13,19 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
+- powershell: |
+    # Using an input-macro:
+    Write-Host "This works: $(apiLogin)"
+
+    # Using the env var directly:
+    Write-Host "This does not work: $env:apiLogin"
+
+    # Using the mapped env var:
+    Write-Host "This works: $env:BITLY_API_LOGIN"    # Recommended
+  env:
+    BITLY_API_KEY: $(apiKey)
+    BITLY_API_LOGIN: $(apiLogin)
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'Build $(buildConfiguration)'
 - script: dotnet test --configuration $(buildConfiguration)
   displayName: 'Run tests ($(buildConfiguration))'
-  env:
-    BITLY_API_KEY: $(apiKey)
-    BITLY_API_LOGIN: $(apiLogin)
