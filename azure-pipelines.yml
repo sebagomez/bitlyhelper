@@ -28,7 +28,7 @@ steps:
     # Using the mapped env var:
     Write-Host "This works: $env:MY_MAPPED_ENV_VAR"    # Recommended
   env:
-    MY_MAPPED_ENV_VAR: $(apiLogin)
+    MY_MAPPED_ENV_VAR: $env:apiLogin
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'Build $(buildConfiguration)'
 - script: dotnet test --configuration $(buildConfiguration)
