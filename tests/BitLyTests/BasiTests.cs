@@ -61,8 +61,26 @@ namespace BitLyTests
 		[Fact]
 		public async Task Test1()
 		{
-			output.WriteLine($"APILogin is: '{APILogin}'");
-			output.WriteLine($"APIKey is: '{APIKey}'");
+			output.WriteLine($"===EnvironmentVariableTarget.Process===");
+			var procs = Environment.GetEnvironmentVariables(EnvironmentVariableTarget.Process); 
+			foreach (var item in procs.Keys)
+			{
+				output.WriteLine($"{item}:{procs[item]}");
+			}
+
+			output.WriteLine($"===EnvironmentVariableTarget.Machine===");
+			procs = Environment.GetEnvironmentVariables(EnvironmentVariableTarget.Machine);
+			foreach (var item in procs.Keys)
+			{
+				output.WriteLine($"{item}:{procs[item]}");
+			}
+
+			output.WriteLine($"===EnvironmentVariableTarget.User===");
+			procs = Environment.GetEnvironmentVariables(EnvironmentVariableTarget.User);
+			foreach (var item in procs.Keys)
+			{
+				output.WriteLine($"{item}:{procs[item]}");
+			}
 
 			BitLyShortener shortener = new BitLyShortener(APILogin, APIKey);
 			string shortened = await shortener.GetShortenString("This is a string with Google url http://google.com");
