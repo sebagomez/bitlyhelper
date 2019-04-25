@@ -18,6 +18,17 @@ steps:
     filePath: './setEnvironmentVariables.ps1'
     arguments: '$env:apiLogin $env:apiKey'
   displayName: 'PowerShell Script'
+- powershell: |
+    # Using an input-macro:
+    Write-Host "This works: $(apiLogin)"
+
+    # Using the env var directly:
+    Write-Host "This does not work: $env:apiLogin"
+
+    # Using the mapped env var:
+    Write-Host "This works: $env:MY_MAPPED_ENV_VAR"    # Recommended
+  env:
+    MY_MAPPED_ENV_VAR: $(apiLogin)
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'Build $(buildConfiguration)'
 - script: dotnet test --configuration $(buildConfiguration)
