@@ -45,6 +45,9 @@ namespace BitLyTests
 #endif
 			APILogin = Environment.GetEnvironmentVariable(API_LOGIN);
 			APIKey = Environment.GetEnvironmentVariable(API_KEY);
+
+			if (string.IsNullOrEmpty(APIKey) || string.IsNullOrEmpty(APILogin))
+				throw new Exception("APIKey and/or APILogin not defined");
 		}
 
 		[Fact]
