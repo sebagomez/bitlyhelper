@@ -1,0 +1,8 @@
+C:\code\sebastian\BitLyHelper\src\bin\Debug\netcoreapp2.2\Sebagomez.BitLyHelper.deps.json
+C:\code\sebastian\BitLyHelper\src\bin\Debug\netcoreapp2.2\Sebagomez.BitLyHelper.dll
+C:\code\sebastian\BitLyHelper\src\bin\Debug\netcoreapp2.2\Sebagomez.BitLyHelper.pdb
+C:\code\sebastian\BitLyHelper\src\obj\Debug\netcoreapp2.2\BitlyHelper.csproj.CoreCompileInputs.cache
+C:\code\sebastian\BitLyHelper\src\obj\Debug\netcoreapp2.2\BitlyHelper.AssemblyInfoInputs.cache
+C:\code\sebastian\BitLyHelper\src\obj\Debug\netcoreapp2.2\BitlyHelper.AssemblyInfo.cs
+C:\code\sebastian\BitLyHelper\src\obj\Debug\netcoreapp2.2\Sebagomez.BitLyHelper.dll
+C:\code\sebastian\BitLyHelper\src\obj\Debug\netcoreapp2.2\Sebagomez.BitLyHelper.pdb
