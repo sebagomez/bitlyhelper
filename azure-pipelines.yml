@@ -16,6 +16,6 @@ variables:
 
 steps:
 - script: dotnet build --configuration $(buildConfiguration)
-  displayName: 'Build $(buildConfiguration) requested by $(BUILD_SOURCEVERSIONAUTHOR)'
+  displayName: 'Build $(buildConfiguration) requested by $(Build.SourceVersionAuthor)'
 - script: dotnet test --configuration $(buildConfiguration)
   displayName: 'Run tests ($(buildConfiguration))'
