@@ -12,8 +12,6 @@ namespace Sebagomez.BitLyHelper
 	{
 		const string API_URL = "http://api.bit.ly/shorten?version={0}&longUrl={1}&login={2}&apiKey={3}&format=xml";
 		const string API_VERSION = "2.0.1";
-		//const string API_LOGIN = "sebagomez";
-		//const string API_KEY = "R_bdaed2b56fd1f15c99364abfea6e9b3a";
 
 		public string ApiLogin { get; private set; }
 		public string ApiKey { get; private set; }
