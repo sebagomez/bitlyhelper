@@ -19,3 +19,7 @@ steps:
   displayName: 'Build $(buildConfiguration)'
 - script: dotnet test --configuration $(buildConfiguration)
   displayName: 'Run tests ($(buildConfiguration))'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    ArtifactName: 'drop'
