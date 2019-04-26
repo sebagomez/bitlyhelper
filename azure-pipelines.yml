@@ -19,7 +19,7 @@ steps:
   displayName: 'Build $(buildConfiguration)'
 - script: dotnet test --configuration $(buildConfiguration) ./tests/BitLyTests.csproj
   displayName: 'Run tests ($(buildConfiguration))'
-- script: dotnet pack --no-build --configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory) ./src/BitLyHelper.csproj
+- script: dotnet pack --no-build --configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory) ./src/BitlyHelper.csproj
   displayName: 'NuGet pack'
 
 - task: PublishBuildArtifacts@1
