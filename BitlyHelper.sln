@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.572
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BitlyHelper.Core", "src\BitlyHelper.Core.csproj", "{0105B6C5-7FC4-47A8-8F5F-2D2621090CC0}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{CFFA1F1E-8E41-45F1-A934-25AB3E53348C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BitLyHelper", "src\BitLyHelper.csproj", "{58C24262-7672-4CF0-9672-2A8E80A5F598}"
@@ -17,10 +15,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0105B6C5-7FC4-47A8-8F5F-2D2621090CC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0105B6C5-7FC4-47A8-8F5F-2D2621090CC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0105B6C5-7FC4-47A8-8F5F-2D2621090CC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0105B6C5-7FC4-47A8-8F5F-2D2621090CC0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{58C24262-7672-4CF0-9672-2A8E80A5F598}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{58C24262-7672-4CF0-9672-2A8E80A5F598}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{58C24262-7672-4CF0-9672-2A8E80A5F598}.Release|Any CPU.ActiveCfg = Release|Any CPU

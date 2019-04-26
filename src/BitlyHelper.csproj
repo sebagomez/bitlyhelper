@@ -14,14 +14,10 @@
     <Description>The simplest BitLy SDK for .NET Core to shorten a url</Description>
     <RepositoryUrl>https://github.com/sebagomez/bitlyhelper</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <SignAssembly>true</SignAssembly>
+    <SignAssembly>false</SignAssembly>
     <AssemblyOriginatorKeyFile>C:\Users\user\OneDrive\Documents\Personales\secure\sebagomez.snk</AssemblyOriginatorKeyFile>
     <PackageReleaseNotes>- Now as .NET Standard 2.0</PackageReleaseNotes>
     <ApplicationIcon />
   </PropertyGroup>
-
-  <ItemGroup>
-    <None Include="..\..\..\..\Users\user\OneDrive\Documents\Personales\secure\sebagomez.snk" Link="sebagomez.snk" />
-  </ItemGroup>
 
 </Project>
