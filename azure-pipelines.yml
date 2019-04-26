@@ -11,6 +11,12 @@ pool:
 
 variables:
   buildConfiguration: 'Release'
+  BITLY_KEY_LOGIN1: $(apiLogin)
+  BITLY_KEY_LOGIN2: $env:apiLogin
+  BITLY_KEY_LOGIN3: '%apiLogin%'
+  BITLY_KEY_LOGIN4: '$apiLogin'
+  BITLY_KEY_LOGIN5: $apiLogin
+
 
 steps:
 - task: PowerShell@2
