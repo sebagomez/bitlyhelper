@@ -2,3 +2,5 @@ launchSettings.json
 .vs/
 [Bb]in/
 [Oo]bj/
+
+*.user
