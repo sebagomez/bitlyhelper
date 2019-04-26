@@ -15,7 +15,7 @@ variables:
   BITLY_API_KEY: $(apiKey)
 
 steps:
-- script: dotnet build --configuration $(buildConfiguration) ./src/BitLyHelper.csproj
+- script: dotnet build --configuration $(buildConfiguration) ./src/BitlyHelper.csproj
   displayName: 'Build $(buildConfiguration)'
 - script: dotnet test --configuration $(buildConfiguration) ./tests/BitLyTests.csproj
   displayName: 'Run tests ($(buildConfiguration))'
