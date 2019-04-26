@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BitlyHelper.Core", "src\Bit
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{CFFA1F1E-8E41-45F1-A934-25AB3E53348C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BitlyHelper", "src\BitlyHelper.csproj", "{58C24262-7672-4CF0-9672-2A8E80A5F598}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BitLyHelper", "src\BitLyHelper.csproj", "{58C24262-7672-4CF0-9672-2A8E80A5F598}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BitLyTests", "tests\BitLyTests.csproj", "{0403C12C-423B-45F4-8BE3-8B50817C3EBD}"
 EndProject
