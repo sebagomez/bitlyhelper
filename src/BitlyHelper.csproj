@@ -1,29 +1,24 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.2</TargetFramework>
-    <AssemblyName>Sebagomez.BitLyHelper</AssemblyName>
-    <RootNamespace>Sebagomez.BitLyHelper</RootNamespace>
-    <SignAssembly>false</SignAssembly>
-    <AssemblyOriginatorKeyFile>C:\Users\user\OneDrive\Documents\Personales\secure\sebagomez.snk</AssemblyOriginatorKeyFile>
-    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-    <Version>1.1.1.2</Version>
-    <RepositoryUrl>https://github.com/sebagomez/bitlyhelper</RepositoryUrl>
-    <RepositoryType>git</RepositoryType>
-    <ApplicationIcon />
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageId>Sebagomez.BitLyHelper</PackageId>
+    <Version>1.1.2</Version>
     <Authors>@sebagomez</Authors>
-    <Description>The simplest BitLy SDK for .NET Core to shorten a url</Description>
-    <PackageIconUrl>https://app.bitly.com/favicon.ico</PackageIconUrl>
-    <PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
+    <Product>Sebagomez.BitLyHelper</Product>
     <PackageProjectUrl>https://github.com/sebagomez/bitlyhelper</PackageProjectUrl>
     <PackageTags>bitly</PackageTags>
-    <AssemblyVersion>1.1.1.2</AssemblyVersion>
+    <PackageIconUrl>https://app.bitly.com/favicon.ico</PackageIconUrl>
+    <PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
     <Copyright>Copyright 2019 @SebaGomez</Copyright>
+    <Description>The simplest BitLy SDK for .NET Core to shorten a url</Description>
+    <RepositoryUrl>https://github.com/sebagomez/bitlyhelper</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>C:\Users\user\OneDrive\Documents\Personales\secure\sebagomez.snk</AssemblyOriginatorKeyFile>
+    <PackageReleaseNotes>- Now as .NET Standard 2.0</PackageReleaseNotes>
+    <ApplicationIcon />
   </PropertyGroup>
-
-  <ItemGroup>
-    <Folder Include="Properties\" />
-  </ItemGroup>
 
   <ItemGroup>
     <None Include="..\..\..\..\Users\user\OneDrive\Documents\Personales\secure\sebagomez.snk" Link="sebagomez.snk" />
