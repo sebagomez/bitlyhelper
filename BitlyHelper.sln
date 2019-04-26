@@ -5,7 +5,9 @@ VisualStudioVersion = 15.0.28307.572
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BitlyHelper", "src\BitlyHelper.csproj", "{0105B6C5-7FC4-47A8-8F5F-2D2621090CC0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitLyTests", "tests\BitLyTests\BitLyTests.csproj", "{5356A9F1-F430-4875-A138-CB9D1F1A540A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BitLyTests", "tests\BitLyTests\BitLyTests.csproj", "{5356A9F1-F430-4875-A138-CB9D1F1A540A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{CFFA1F1E-8E41-45F1-A934-25AB3E53348C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,6 +26,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5356A9F1-F430-4875-A138-CB9D1F1A540A} = {CFFA1F1E-8E41-45F1-A934-25AB3E53348C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C6250D0E-4894-454F-9AE1-64F7D1A9F6EB}

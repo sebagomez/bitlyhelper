@@ -10,11 +10,11 @@ using Xunit.Abstractions;
 
 namespace BitLyTests
 {
-	public class BasiTests
+	public class BasicTests
 	{
 		private readonly ITestOutputHelper output;
 
-		public BasiTests(ITestOutputHelper output)
+		public BasicTests(ITestOutputHelper output)
 		{
 			this.output = output;
 		}
@@ -25,7 +25,7 @@ namespace BitLyTests
 		const string API_LOGIN = "BITLY_API_LOGIN";
 		const string API_KEY = "BITLY_API_KEY";
 
-		static BasiTests()
+		static BasicTests()
 		{
 #if DEBUG
 			if (File.Exists("Properties\\launchSettings.json"))
