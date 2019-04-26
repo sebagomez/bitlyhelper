@@ -7,34 +7,12 @@ trigger:
 - master
 
 pool:
-  vmImage: 'vs2017-win2016'
+  vmImage: 'Ubuntu-16.04'
 
 variables:
   buildConfiguration: 'Release'
-  BITLY_KEY_LOGIN1: $(apiLogin)
-  BITLY_KEY_LOGIN2: $env:apiLogin
-  BITLY_KEY_LOGIN3: '%apiLogin%'
-  BITLY_KEY_LOGIN4: '$apiLogin'
-  BITLY_KEY_LOGIN5: $apiLogin
-
 
 steps:
-- task: PowerShell@2
-  inputs:
-    filePath: './setEnvironmentVariables.ps1'
-    arguments: '$env:apiLogin $env:apiKey'
-  displayName: 'PowerShell Script'
-- powershell: |
-    # Using an input-macro:
-    # Write-Host "This works: $(apiLogin)", NO IT DOES NOT
-
-    # Using the env var directly:
-    Write-Host "This does not work: $env:apiLogin"
-
-    # Using the mapped env var:
-    Write-Host "This works: $env:MY_MAPPED_ENV_VAR"    # Recommended
-  env:
-    MY_MAPPED_ENV_VAR: $env:apiLogin
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'Build $(buildConfiguration)'
 - script: dotnet test --configuration $(buildConfiguration)
