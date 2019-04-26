@@ -2,7 +2,6 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Sebagomez.BitLyHelper;
 using System;
-using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
@@ -54,38 +53,41 @@ namespace BitLyTests
 			APILogin = Environment.GetEnvironmentVariable(API_LOGIN);
 			APIKey = Environment.GetEnvironmentVariable(API_KEY);
 
-			//if (string.IsNullOrEmpty(APIKey) || string.IsNullOrEmpty(APILogin))
-			//	throw new Exception("APIKey and/or APILogin not defined");
+			if (string.IsNullOrEmpty(APIKey) || string.IsNullOrEmpty(APILogin))
+				throw new Exception("APIKey and/or APILogin not defined");
+		}
+
+
+		const string GOOGLE = "http://google.com";
+		const string SHORT_GOOGLE = "http://bit.ly/2L6Cz94";
+
+		[Fact]
+		public async Task JustUrl()
+		{
+			BitLyShortener shortener = new BitLyShortener(APILogin, APIKey);
+			string shortened = await shortener.ShortenUrl(GOOGLE);
+
+			Assert.Equal(SHORT_GOOGLE, shortened);
 		}
 
 		[Fact]
-		public async Task Test1()
+		public async Task ShortText()
 		{
-			output.WriteLine($"===EnvironmentVariableTarget.Process===");
-			var procs = Environment.GetEnvironmentVariables(EnvironmentVariableTarget.Process); 
-			foreach (var item in procs.Keys)
-			{
-				output.WriteLine($"{item}:{procs[item]}");
-			}
-
-			output.WriteLine($"===EnvironmentVariableTarget.Machine===");
-			procs = Environment.GetEnvironmentVariables(EnvironmentVariableTarget.Machine);
-			foreach (var item in procs.Keys)
-			{
-				output.WriteLine($"{item}:{procs[item]}");
-			}
-
-			output.WriteLine($"===EnvironmentVariableTarget.User===");
-			procs = Environment.GetEnvironmentVariables(EnvironmentVariableTarget.User);
-			foreach (var item in procs.Keys)
-			{
-				output.WriteLine($"{item}:{procs[item]}");
-			}
-
+			string template = "This is a string with Google url {0}";
 			BitLyShortener shortener = new BitLyShortener(APILogin, APIKey);
-			string shortened = await shortener.GetShortenString("This is a string with Google url http://google.com");
+			string shortened = await shortener.GetShortenString(string.Format(template, GOOGLE));
 
-			Assert.Equal("This is a string with Google url http://bit.ly/2L6Cz94", shortened);
+			Assert.Equal(string.Format(template, SHORT_GOOGLE), shortened);
+		}
+
+		[Fact]
+		public async Task NoUrl()
+		{
+			string text = "This text has no urls";
+			BitLyShortener shortener = new BitLyShortener(APILogin, APIKey);
+			string shortened = await shortener.GetShortenString(text);
+
+			Assert.Equal(text, shortened);
 		}
 	}
 }
