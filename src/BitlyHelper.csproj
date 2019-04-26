@@ -7,12 +7,12 @@
     <SignAssembly>false</SignAssembly>
     <AssemblyOriginatorKeyFile>C:\Users\user\OneDrive\Documents\Personales\secure\sebagomez.snk</AssemblyOriginatorKeyFile>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-    <Version>1.1.1</Version>
+    <Version>1.1.1.1</Version>
     <RepositoryUrl>https://github.com/sebagomez/bitlyhelper</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <ApplicationIcon />
     <Authors>@sebagomez</Authors>
-    <Description>The simplest BitLy SDK for .NET Core to shoerten a url</Description>
+    <Description>The simplest BitLy SDK for .NET Core to shorten a url</Description>
     <PackageIconUrl>https://app.bitly.com/favicon.ico</PackageIconUrl>
   </PropertyGroup>
 

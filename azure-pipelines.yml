@@ -20,7 +20,7 @@ steps:
 - script: dotnet test --configuration $(buildConfiguration)
   displayName: 'Run tests ($(buildConfiguration))'
 - script: dotnet pack --no-build --configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)
-  displayName: 'Nuget pack'
+  displayName: 'NuGet pack'
 
 - task: PublishBuildArtifacts@1
   inputs:
