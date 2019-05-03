@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <PackageId>Sebagomez.BitLyHelper</PackageId>
-    <Version>1.1.2</Version>
+    <Version>1.1.3</Version>
     <Authors>@sebagomez</Authors>
     <Product>Sebagomez.BitLyHelper</Product>
     <PackageProjectUrl>https://github.com/sebagomez/bitlyhelper</PackageProjectUrl>
@@ -16,8 +16,9 @@
     <RepositoryType>git</RepositoryType>
     <SignAssembly>false</SignAssembly>
     <AssemblyOriginatorKeyFile>C:\Users\user\OneDrive\Documents\Personales\secure\sebagomez.snk</AssemblyOriginatorKeyFile>
-    <PackageReleaseNotes>- Now as .NET Standard 2.0</PackageReleaseNotes>
-    <ApplicationIcon />
+    <PackageReleaseNotes>- Fixed AssemblyName</PackageReleaseNotes>
+    <ApplicationIcon>bitly.ico</ApplicationIcon>
+    <AssemblyName>Sebagomez.BitLyHelper</AssemblyName>
   </PropertyGroup>
 
 </Project>
