@@ -11,8 +11,9 @@ pool:
 
 variables:
   buildConfiguration: 'Release'
-  BITLY_API_LOGIN: $(apiLogin)
-  BITLY_API_KEY: $(apiKey)
+  VAULT_URL: $(vaultUrl)
+  APPLICATION_ID: $(appId)
+  APPLICATION_SECRET: $(appSecret)
 
 steps:
 - script: dotnet build --configuration $(buildConfiguration) ./src/BitlyHelper.csproj

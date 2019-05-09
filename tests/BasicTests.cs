@@ -27,9 +27,6 @@ namespace BitLyTests
 		const string GOOGLE = "http://google.com";
 		const string SHORT_GOOGLE = "http://bit.ly/2L6Cz94";
 
-
-		
-
 		[Fact]
 		public async Task JustUrl()
 		{
