@@ -11,15 +11,17 @@ pool:
 
 variables:
   buildConfiguration: 'Release'
-  VAULT_URL: $(vaultUrl)
-  APPLICATION_ID: $(appId)
-  APPLICATION_SECRET: $(appSecret)
+
 
 steps:
 - script: dotnet build --configuration $(buildConfiguration) ./src/BitlyHelper.csproj
   displayName: 'Build $(buildConfiguration)'
 - script: dotnet test --configuration $(buildConfiguration) ./tests/BitLyTests.csproj
   displayName: 'Run tests ($(buildConfiguration))'
+  env:
+    VAULT_URL: $(vaultUrl)
+    APPLICATION_ID: $(appId)
+    APPLICATION_SECRET: $(appSecret)
 - script: dotnet pack --no-build --configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory) ./src/BitlyHelper.csproj
   displayName: 'NuGet pack'
 
