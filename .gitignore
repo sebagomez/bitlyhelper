@@ -1,5 +1,7 @@
 launchSettings.json
 .vs/
+.vscode/
+
 [Bb]in/
 [Oo]bj/
 
