@@ -12,7 +12,6 @@ pool:
 variables:
   buildConfiguration: 'Release'
 
-
 steps:
 - script: dotnet build --configuration $(buildConfiguration) ./src/BitlyHelper.csproj
   displayName: 'Build $(buildConfiguration)'
