@@ -1,0 +1,43 @@
+name: Build & Publish
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ master ]
+    paths: 
+      - 'src/**'
+      - '.github/workflows/dotnet.yaml'
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    env:
+      CONFIGURATION: Release
+      VERBOSITY: normal
+      NUGET_SOURCE: https://api.nuget.org/v3/index.json
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: 6.0.x
+    - name: Restore dependencies
+      run: dotnet restore
+    - name: Build
+      run: dotnet build --no-restore --configuration $CONFIGURATION  ./src/BitlyHelper.csproj
+      
+      # Tests need to be added after injecting the right credentials
+    - name: Test
+      run: |
+        echo Test wiil be run here
+
+    - name: Pack
+      run: dotnet pack --no-build --configuration $CONFIGURATION --output ./bin ./src/BitlyHelper.csproj
+    - name: Push
+      env:
+        NUGET_KEY: ${{ secrets.BITLY_NUGET_KEY }}
+      run: |
+        nupkg=./bin/$(ls ./bin)
+        dotnet nuget push $nupkg -k $NUGET_KEY -s $NUGET_SOURCE

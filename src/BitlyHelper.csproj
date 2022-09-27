@@ -1,22 +1,22 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <PackageId>Sebagomez.BitLyHelper</PackageId>
-    <Version>1.1.3</Version>
+    <Version>1.1.4</Version>
     <Authors>@sebagomez</Authors>
     <Product>Sebagomez.BitLyHelper</Product>
     <PackageProjectUrl>https://github.com/sebagomez/bitlyhelper</PackageProjectUrl>
     <PackageTags>bitly</PackageTags>
     <PackageIconUrl>https://app.bitly.com/favicon.ico</PackageIconUrl>
     <PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
-    <Copyright>Copyright 2019 @SebaGomez</Copyright>
-    <Description>The simplest BitLy SDK for .NET Core to shorten a url</Description>
+    <Copyright>Copyright 2022 @SebaGomez</Copyright>
+    <Description>The simplest BitLy SDK for .NET to shorten a url</Description>
     <RepositoryUrl>https://github.com/sebagomez/bitlyhelper</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <SignAssembly>false</SignAssembly>
     <AssemblyOriginatorKeyFile>C:\Users\user\OneDrive\Documents\Personales\secure\sebagomez.snk</AssemblyOriginatorKeyFile>
-    <PackageReleaseNotes>- Fixed AssemblyName</PackageReleaseNotes>
+    <PackageReleaseNotes>- Updating to .NET 6</PackageReleaseNotes>
     <ApplicationIcon>bitly.ico</ApplicationIcon>
     <AssemblyName>Sebagomez.BitLyHelper</AssemblyName>
   </PropertyGroup>
