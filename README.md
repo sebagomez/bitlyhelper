@@ -1,4 +1,4 @@
-[![Build Status](https://dev.azure.com/sebagomez/bitlyhelper/_apis/build/status/sebagomez.bitlyhelper?branchName=master)](https://dev.azure.com/sebagomez/bitlyhelper/_build/latest?definitionId=11&branchName=master)
+[![Build & Publish](https://github.com/sebagomez/bitlyhelper/actions/workflows/dotnet.yaml/badge.svg)](https://github.com/sebagomez/bitlyhelper/actions/workflows/dotnet.yaml)
 [![NuGet Downloads](https://img.shields.io/nuget/dt/Sebagomez.BitLyHelper.svg?label=NuGet%20downloads)](https://www.nuget.org/packages/Sebagomez.BitLyHelper/)
 
 # BitLy Helper
