@@ -16,6 +16,7 @@ jobs:
       CONFIGURATION: Release
       VERBOSITY: normal
       NUGET_SOURCE: https://api.nuget.org/v3/index.json
+      PROJECT_FILE: ./src/BitlyHelper.csproj
 
     steps:
     - uses: actions/checkout@v3
@@ -24,9 +25,9 @@ jobs:
       with:
         dotnet-version: 6.0.x
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore $PROJECT_FILE
     - name: Build
-      run: dotnet build --no-restore --configuration $CONFIGURATION  ./src/BitlyHelper.csproj
+      run: dotnet build --no-restore --configuration $CONFIGURATION $PROJECT_FILE
       
       # Tests need to be added after injecting the right credentials
     - name: Test
@@ -34,7 +35,7 @@ jobs:
         echo Test wiil be run here
 
     - name: Pack
-      run: dotnet pack --no-build --configuration $CONFIGURATION --output ./bin ./src/BitlyHelper.csproj
+      run: dotnet pack --no-build --configuration $CONFIGURATION --output ./bin $PROJECT_FILE
     - name: Push
       env:
         NUGET_KEY: ${{ secrets.BITLY_NUGET_KEY }}
