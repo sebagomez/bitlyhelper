@@ -1,9 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
     <PackageId>Sebagomez.BitLyHelper</PackageId>
-    <Version>1.1.4</Version>
+    <Version>1.1.5</Version>
     <Authors>@sebagomez</Authors>
     <Product>Sebagomez.BitLyHelper</Product>
     <PackageProjectUrl>https://github.com/sebagomez/bitlyhelper</PackageProjectUrl>
@@ -16,7 +16,7 @@
     <RepositoryType>git</RepositoryType>
     <SignAssembly>false</SignAssembly>
     <AssemblyOriginatorKeyFile>C:\Users\user\OneDrive\Documents\Personales\secure\sebagomez.snk</AssemblyOriginatorKeyFile>
-    <PackageReleaseNotes>- Updating to .NET 6</PackageReleaseNotes>
+    <PackageReleaseNotes>- Updating to .NET 7</PackageReleaseNotes>
     <ApplicationIcon>bitly.ico</ApplicationIcon>
     <AssemblyName>Sebagomez.BitLyHelper</AssemblyName>
   </PropertyGroup>
